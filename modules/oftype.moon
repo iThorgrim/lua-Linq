@@ -1,11 +1,11 @@
-(self, predicate) ->
+(self, stype) ->
     results = {}
     if @isParallel
-        results = self\processInParallel @data, (results, key, value) ->
-            if predicate value
+        results = @processInParallel @data, (results, key, value) ->
+            if type(value) == stype
                 results[key] = value
     else
         for key, value in pairs @data
-            if predicate value
+            if type(value) == stype
                 results[key] = value
     Linq results

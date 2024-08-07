@@ -1,10 +1,10 @@
 (self, selector) ->
     results = {}
-    if self.isParallel
-        results = self\processInParallel self.data, (results, key, value) ->
+    if @isParallel
+        results = self\processInParallel @data, (results, key, value) ->
             results[key] = selector value
     else
         results = {}
-        for key, value in pairs self.data
+        for key, value in pairs @data
             results[key] = selector value
     Linq results

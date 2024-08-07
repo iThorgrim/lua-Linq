@@ -8,6 +8,48 @@ class Linq
     registerBaseModules: () =>
         baseModules = {
             select:   require 'modules.select',
+            selectMany:   require 'modules.selectmany',
+            
+            orderBy: require 'modules.orderby',
+            orderByDescending: require 'modules.orderbydescending',
+
+            sum: require 'modules.sum',
+            average: require 'modules.average',
+            min: require 'modules.min',
+            max: require 'modules.max',
+            count: require 'modules.count',
+
+            groupBy: require 'modules.groupby',
+            
+            -- Don't work for the moment
+            -- join: require 'modules.join',
+            -- joinGroup: require 'modules.joingroup',
+            
+            take:   require 'modules.take',
+            skip:   require 'modules.skip',
+            takeWhile:   require 'modules.takewhile',
+            skipWhile:   require 'modules.skipwhile',
+            
+            concat:    require 'modules.concat',
+            
+            -- Don't work for the moment
+            -- cast:    require 'modules.cast',
+            ofType:    require 'modules.oftype',
+
+            first:    require 'modules.first',
+            last:    require 'modules.last',
+            single:    require 'modules.single',
+            elementAt:    require 'modules.elementat',
+
+            range:    require 'modules.range',
+            -- Don't work for the moment
+            -- repeat:    require 'modules.repeat',
+
+            distinct:    require 'modules.distinct',
+            union:    require 'modules.union',
+            intersect:    require 'modules.intersect',
+            except:    require 'modules.except',
+
             where:    require 'modules.where',
         }
 
@@ -49,8 +91,8 @@ class Linq
 
     toList: () =>
         result = {}
-        for _, value in pairs @data
+        for key, value in pairs @data
             result[#result + 1] = value
         result
-
+    
 _G["Linq"] = Linq
