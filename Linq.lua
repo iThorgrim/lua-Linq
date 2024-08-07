@@ -19,24 +19,13 @@ do
       return Linq(result)
     end,
     orderBy = function(self, keySelector)
-      local sortedKeys = { }
-      for k in pairs(self.data) do
-        table.insert(sortedKeys, k)
+      local result = {}
+      for _, value in ipairs(self.data) do
+        table.insert(result, value)
       end
-      table.sort(sortedKeys, function(a, b)
-        if keySelector(self.data[a]) < keySelector(self.data[b]) then
-          return -1
-        elseif keySelector(self.data[a]) > keySelector(self.data[b]) then
-          return 1
-        else
-          return 0
-        end
+      table.sort(result, function(a, b)
+        return keySelector(a) < keySelector(b)
       end)
-      local result = { }
-      for _index_0 = 1, #sortedKeys do
-        local k = sortedKeys[_index_0]
-        result[k] = self.data[k]
-      end
       return Linq(result)
     end,
     toList = function(self)
