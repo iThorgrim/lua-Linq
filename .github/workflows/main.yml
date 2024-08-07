@@ -1,0 +1,2 @@
+- name: Compile MoonScript and Create PR
+  uses: iThorgrim/github_moon_to_lua@v0.0.1
