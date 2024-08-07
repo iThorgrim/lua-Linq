@@ -15,7 +15,7 @@
 - **Appending**: Add elements from one collection to another.
 - **String Conversion**: Represent tables as strings for easy inspection.
 
-The Linq library offers a comprehensive [set of methods](https://github.com/iThorgrim/lua-LinQ/wiki/Method-Reference) for working with tables in Lua/Moonscript, making it easier to perform complex data manipulations efficiently and concisely.
+The Linq library offers a comprehensive [set of methods](https://github.com/iThorgrim/lua-LinQ/wiki) for working with tables in Lua/Moonscript, making it easier to perform complex data manipulations efficiently and concisely.
 
 ## Documentation
 
@@ -26,7 +26,7 @@ For detailed usage, examples, and more information, refer to the documentation i
 
 ## Method Reference
 
-A comprehensive table of all methods, along with a unique example for each, can be found in the [Wiki](https://github.com/iThorgrim/lua-LinQ/wiki/Method-Reference).
+A comprehensive table of all methods, along with a unique example for each, can be found in the [Wiki](https://github.com/iThorgrim/lua-LinQ/wiki).
 
 ## Contribution
 
